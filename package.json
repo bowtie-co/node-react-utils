@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Bowtie React Utilities",
   "main": "index.js",
+  "engines": {
+    "node": ">=6.x"
+  },
   "scripts": {
     "doc": "jsdoc --configure .jsdoc.json --verbose",
     "doc:commit": "npm run doc && git add docs && git commit -m 'Generated Docs'",
