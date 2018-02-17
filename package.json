@@ -1,0 +1,56 @@
+{
+  "name": "@bowtie/react-utils",
+  "version": "0.0.1",
+  "description": "Bowtie React Utilities",
+  "main": "index.js",
+  "scripts": {
+    "doc": "jsdoc --configure .jsdoc.json --verbose",
+    "doc:commit": "npm run doc && git add docs && git commit -m 'Generated Docs'",
+    "build": "babel src -d lib",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "test": "npm run lint && npm run build && mocha test/**/*.spec.js",
+    "test:watch": "mocha test/**/*.spec.js --watch",
+    "preversion": "npm test && npm run doc:commit",
+    "postversion": "git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bowtie-co/node-react-utils.git"
+  },
+  "keywords": [
+    "bowtie",
+    "react",
+    "redux",
+    "recompose",
+    "utils",
+    "utilities",
+    "helpers",
+    "witheither",
+    "withmaybe"
+  ],
+  "author": "Bowtie",
+  "license": "MIT",
+  "standard": {
+    "ignore": [
+      "docs/*"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/bowtie-co/node-react-utils/issues"
+  },
+  "homepage": "https://github.com/bowtie-co/node-react-utils#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^4.1.2",
+    "jsdoc": "^3.5.5",
+    "minami": "^1.2.3",
+    "mocha": "^5.0.1",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "react": "^16.2.0"
+  }
+}
