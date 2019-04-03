@@ -13,7 +13,7 @@
     "scan": "npm audit",
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "pretest": "npm run lint && npm run scan",
+    "pretest": "npm run lint",
     "test": "npm run lint && npm run build && mocha test/**/*.spec.js",
     "test:watch": "mocha test/**/*.spec.js --watch",
     "preversion": "npm test && npm run doc:commit",
